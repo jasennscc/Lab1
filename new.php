@@ -11,7 +11,7 @@
 <h3> <?php echo "Greeting from lab 1!" ?> </h3>
 
 <?php
-    $name = Jasen;
+    $name = "Jasen";
     echo $name;
 ?>
 
@@ -19,7 +19,7 @@
 </p>
 
 <?php
-    $last = Stubbington;
+    $last = "Stubbington";
     echo "My name is " . $name . " " . $last;
 ?>
 
@@ -27,6 +27,9 @@
 </p>
 
 <?php
+
+    echo "Arithmetic <br><br>";
+
     $a1 = 32;   $a2 = 14;   $a3 = 83;
 
     echo ($a1 * $a2) + $a3;
@@ -44,6 +47,52 @@
     echo $c1%$c2;
     echo "<p>
     </p>"
+?>
+
+<?php
+
+    echo "Countdown <br><br>";
+
+    for ($x = 10; $x >= 0; $x--)
+    {
+        if ($x == 0)
+            echo "Blast Off";
+        else
+            echo $x . "... ";
+    }
+
+    echo "<br><br>";
+?>
+
+<?php
+    $cArr = array("Red", "Orange", "Yellow", "White", "Green", "Blue", "Black");
+    $cLength = count($cArr);
+
+    echo "For Loop <br><br>";
+    for ($x = 0; $x < $cLength; $x++)
+    {
+        echo $cArr[$x] . "<br>";
+    }
+
+    echo "<br>";
+
+    echo "Foreach Loop <br><br>";
+    foreach ($cArr as $color)
+    {
+        echo $color . "<br>";
+    }
+
+    echo "<br>";
+
+    echo "Do While Loop <br><br>";
+
+    $counter = 0;
+
+    do{
+        echo $cArr[$counter] . "<br>";
+        $counter++;
+    }
+    while ($counter < $cLength);
 ?>
 
 
